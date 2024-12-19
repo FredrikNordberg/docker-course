@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  frontend:
+    # Build the image from the Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Map port 3000 of the container to port 3000 on the host
+    ports:
+      - "3000:3000"
+    # Define environment variables
+    environment:
+      DB_URL: mongodb+srv://sujata:rnZzJjIDr3bIDymV@cluster0.hnn88vs.mongodb.net/
+
+
+
